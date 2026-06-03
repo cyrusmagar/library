@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management</title>
+    <link rel="stylesheet" href="cs.css" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">📚 Library</h1>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Members</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+        <h2>Welcome to the Library</h2>
+        <p>Explore thousands of books anytime, anywhere.</p>
+
+        <div class="search-box">
+            <input
+                type="text"
+                placeholder="Search books, authors, categories..."
+            />
+            <button>Search</button>
+        </div>
+
+        <a href="#" class="btn">Browse Books</a>
+    </div>
+</section>
+    <section class="categories">
+        <h2>Book Categories</h2>
+
+        <div class="category-container">
+            <div class="category-card">Trending books</div>
+            <div class="category-card">Classic books</div>
+            <div class="category-card">Science books</div>
+            <div class="category-card">History books</div>
+            <div class="category-card">Biography books</div>
+        </div>
+    </section>
+
+    <section class="books-section">
+        <h2>Trending Books</h2>
+
+        <div class="book-container">
+
+            <div class="book-card">
+                <img src="https://covers.openlibrary.org/b/id/14534277-M.jpg" alt="Tuesdays With Morrie" />
+                <h3>Tuesdays With Morrie</h3>
+                <p>Popular Read</p>
+                <button>Read More</button>
+            </div>
+
+            <div class="book-card">
+                <img src="https://covers.openlibrary.org/b/id/14851290-M.jpg" alt="Patience Is a Virtue" />
+                <h3>Patience Is a Virtue</h3>
+                <p>Self Development</p>
+                <button>Read More</button>
+            </div>
+
+            <div class="book-card">
+                <img src="https://covers.openlibrary.org/b/id/14314700-M.jpg" alt="The Picture of Dorian Gray" />
+                <h3>Dorian Gray</h3>
+                <p>Classic Novel</p>
+                <button>Read More</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="books-section">
+
+        <h2>Classic Books</h2>
+
+        <div class="book-container">
+
+            <div class="book-card">
+                <img src="https://covers.openlibrary.org/b/id/14314700-M.jpg" alt="The Picture of Dorian Gray" />
+                <h3>Dorian Gray</h3>
+                <button>Read More</button>
+            </div>
+
+            <div class="book-card">
+                <img src="https://covers.openlibrary.org/b/id/15144476-M.jpg" alt="The Murder of Roger Ackroyd" />
+                <h3>Roger Ackroyd</h3>
+                <button>Read More</button>
+            </div>
+
+            <div class="book-card">
+                <img src="https://covers.openlibrary.org/b/id/13279632-M.jpg" alt="Notes from Underground" />
+                <h3>Notes from Underground</h3>
+                <button>Read More</button>
+            </div>
+
+        </div>
+    </section>
+ <section class="community-section">
+
+    <h2>Library Community</h2>
+    <p class="section-text">
+        Become a member of our library and stay connected with us for books,
+        events, and reading resources.
+    </p>
+
+    <div class="community-container">
+
+        <!-- Contact -->
+        <div class="contact-box">
+            <h3>Contact Information</h3>
+
+            <p>📍 <strong>Address:</strong> 123 Knowledge Street, Book City, Nepal</p>
+            <p>📞 <strong>Phone:</strong> +977 9800-123-456</p>
+            <p>✉ <strong>Email:</strong> support@readhublibrary.com</p>
+            <p>🕒 <strong>Hours:</strong> Sun - Fri | 9:00 AM - 6:00 PM</p>
+        </div>
+
+        <!-- Members -->
+        <div class="member-box">
+            <h3>Join the Library</h3>
+
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="email" id="email" placeholder="Email Address">
+            <input type="number" id="age" placeholder="Age">
+            <input type="text" id="genre" placeholder="Favorite Genre">
+
+            <button onclick="addMember()">Join Library</button>
+        </div>
+    </div>
+<script>
+function addMember() {
+
+    const name =
+        document.getElementById("name").value;
+
+    const email =
+        document.getElementById("email").value;
+
+    const age =
+        document.getElementById("age").value;
+
+    const genre =
+        document.getElementById("genre").value;
+
+    if (
+        name === "" ||
+        email === "" ||
+        age === "" ||
+        genre === ""
+    ) {
+        alert("Please fill all details!");
+        return;
+    }
+
+    alert(
+        "Welcome " +
+        name +
+        "! You joined the library."
+    );
+
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("genre").value = "";
+}
+</script>
+
+</section>
+</script>
+</body>
+
+</html>
